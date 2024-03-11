@@ -74,3 +74,30 @@
     @apply bg-background text-foreground;
   }
 }
+
+.underline-animation {
+  position: relative;
+  text-decoration: none;
+ }
+ 
+ .underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #fe403f;
+  transition: width .3s ease, left .3s ease;
+ }
+ 
+ .underline-animation:hover::after {
+  width: 100%;
+  left: 0;
+ }
+
+/* styles/globals.css */
+
+.tangerine-font {
+  font-family: Tangerine, sans-serif; /* Specify Tangerine as the primary font */
+}
