@@ -24,7 +24,7 @@ const Footer = () => {
             <Separator orientation="vertical" className="mx-4" />
             <div className="font-sans flex justify-center items-center">
               <MapPin className="w-5 h-5 mr-2" />
-              <h2>Str. Stoimus, Nr.46, Sector 4, Bucuresti</h2>
+              <h2>Str. Șoimuș, Nr.46, Sector 4, Bucuresti</h2>
             </div>
             <Separator orientation="vertical" className="mx-4" />
             <div className="font-sans flex justify-center items-center">
@@ -49,7 +49,7 @@ const Footer = () => {
             <Separator className="my-1" />
             <div className="font-sans flex justify-start items-center">
               <MapPin className="4xs:w-8 4xs:h-8  md:h-5 w-5 mr-2 4xs:ml-2 md:ml-1 xl:ml-2" />
-              <h2>Str. Stoimus, Nr.46, Sector 4, Bucuresti</h2>
+              <h2>Str. Șoimuș, Nr.46, Sector 4, Bucuresti</h2>
             </div>
             <Separator className="my-1" />
             <div className="font-sans flex justify-start items-center mb-2 ml-2">

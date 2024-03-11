@@ -21,7 +21,9 @@ const NavBar = () => {
             <Image src="/images/2.png" width={200} height={200} alt="logo" />
           </Link>
           <div className="hidden xl:block text-lg">
-            <h1 className="text-3xl">Motto ul nostru interesu vostru</h1>
+            <h1 className="text-3xl">
+              Motto ul care te face sa mergi la munka
+            </h1>
           </div>
           <div>
             <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
@@ -48,7 +50,7 @@ const NavBar = () => {
         </nav>
       </header>
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div className="fixed inset-0 font-sans bg-black bg-opacity-50 z-50">
           <nav className="fixed top-0 right-0 left-0 bottom-0 lg:bottom-auto bg-slate-100  ">
             <div
               className="hidden max-lg:block fixed right-0  px-8 py-4 cursor-pointer"
