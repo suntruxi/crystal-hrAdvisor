@@ -109,7 +109,7 @@ const HomePageHero = () => {
           <h1 className="font-sans text-lg text-red-800 font-semibold">
             Vreau sa ma angajez!
           </h1>
-          <Link href="/incarca-cv">
+          <Link href="/upload">
               <Button
                 variant="outline"
                 className="font-sans hover:bg-red-800 hover:text-white mt-2"
