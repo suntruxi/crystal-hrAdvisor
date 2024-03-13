@@ -4,7 +4,7 @@ import DeleteButton from "./DeleteButton";
 
 const page = async () => {
   const { blobs } = await list();
-  console.log({ blobs });
+  // console.log({ blobs });
   return (
     <div className="font-sans">
       {blobs.map((blob) => (
