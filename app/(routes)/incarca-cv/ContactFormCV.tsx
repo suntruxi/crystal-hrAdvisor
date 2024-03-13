@@ -61,10 +61,14 @@ const formSchema = z.object({
 const ContactFormCV = () => {
   const [buttonIsLoading, setButtonIsLoading] = useState(false);
   const [sendSuccess, setSendSuccess] = useState(false);
-  const firstName = localStorage.getItem("firstName");
-  const lastName = localStorage.getItem("lastName");
-  const url = localStorage.getItem("url");
-  const pathName = localStorage.getItem("pathname");
+  let firstName, lastName, url, pathName;
+
+  if (typeof window !== 'undefined') {
+    firstName = localStorage.getItem("firstName");
+    lastName = localStorage.getItem("lastName");
+    url = localStorage.getItem("url");
+    pathName = localStorage.getItem("pathname");
+   }
 
   // console.log(firstName, lastName, url, pathName);
   // 1. Define your form.
