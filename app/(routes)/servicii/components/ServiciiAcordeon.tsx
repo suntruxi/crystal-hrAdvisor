@@ -14,7 +14,7 @@ const ServiciiAcordeon = () => {
       <div className="flex flex-col justify-center items-center w-[90%]">
         <h1 className="text-md">
           Bine ați venit în universul nostru dedicat dezvoltării și consolidării
-          resurselor umane, unde Crystal HR se distinge prin oferirea unui
+          resurselor umane, unde Crystal HR Advisor se distinge prin oferirea unui
           portofoliu complet de servicii specializate în gestionarea talentului
           și optimizarea proceselor de resurse umane. Suntem aici pentru a vă
           susține în toate aspectele critice ale managementului personalului, de
@@ -23,7 +23,7 @@ const ServiciiAcordeon = () => {
           contractelor de muncă.
         </h1>
         <h2 className="mt-4 text-md">
-          Descoperiți cum Crystal HR poate transforma modul în care vă
+          Descoperiți cum Crystal HR Advisorpoate transforma modul în care vă
           gestionați resursele umane, oferind servicii personalizate de
           recrutare, redactare de documente și gestionare a personalului, pentru
           a vă ajuta să atingeți și să depășiți obiectivele organizației

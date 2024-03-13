@@ -18,7 +18,6 @@ import { sendCvForm } from "@/lib/api";
 import { CircleCheckBig, RotateCw } from "lucide-react";
 import { motion } from "framer-motion";
 import { Textarea } from "@/components/ui/textarea";
-import type { PutBlobResult } from "@vercel/blob";
 
 const phoneNumberRegex = /^\d{10}$/;
 
@@ -125,7 +124,7 @@ const ContactFormCV = () => {
                 <FormItem>
                   <FormLabel>Numar de telefon</FormLabel>
                   <FormControl>
-                    <Input placeholder="07XXXXXXXX" {...field} />
+                    <Input placeholder="07XXXXXXXX" {...field}/>
                   </FormControl>
                   <FormDescription>
                     Numarul dumneavoastră pe care va putem contacta

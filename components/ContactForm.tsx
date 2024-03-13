@@ -33,16 +33,8 @@ const formSchema = z.object({
   ),
   company: z
     .string()
-    .min(4)
-    .max(50)
-    .refine(
-      (value) => {
-        return /^(s\.c\.|S\.C\.)\s.*\s(s\.r\.l\.|S\.R\.L\.)$/i.test(value);
-      },
-      {
-        message: "Compania trebuie să fie in formatul 'S.C. COMPANIE S.R.L.'",
-      }
-    ),
+    .min(4, { message: "Numele companiei trebuie să aibă cel puțin 4 caractere." })
+    .max(50, { message: "Numele companiei nu poate avea mai mult de 50 caractere." }),
   phone: z.string().refine((value) => /^\d{10}$/.test(value), {
     message: "Format-ul numărului de telefon: 07XXXXXXXX",
   }),

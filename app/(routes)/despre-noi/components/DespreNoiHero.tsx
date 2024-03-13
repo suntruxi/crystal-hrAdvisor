@@ -7,7 +7,7 @@ const DespreNoiHero = () => {
       style={{
         backgroundImage: `url(/images/despre-noi.jpg)`,
         backgroundSize: "cover",
-        backgroundPosition: "bottom",
+        backgroundPosition: "right",
       }}
     >
       {" "}

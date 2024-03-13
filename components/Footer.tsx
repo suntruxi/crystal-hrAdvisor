@@ -15,17 +15,17 @@ const Footer = () => {
           <div className="flex">
             <div className="font-sans flex justify-center items-center">
               <Phone className="w-5 h-5 mr-2" />
-              <a href="tel:+40712345678">(0712) 345 678</a>
+              <a href="tel:+40760780291">(0760) 780 291</a>
             </div>
             <Separator orientation="vertical" className="mx-4" />
             <div className="font-sans flex justify-center items-center">
               <Mail className="w-5 h-5 mr-2" />
-              <a href="mailto:contact@crystal-hr.com">contact@crystal-hr.com</a>
+              <a href="mailto:office@crystalhradvisor.com">office@crystalhradvisor.com</a>
             </div>
             <Separator orientation="vertical" className="mx-4" />
             <div className="font-sans flex justify-center items-center">
               <MapPin className="w-5 h-5 mr-2" />
-              <Link href="https://maps.app.goo.gl/tC4FurfwAKZ6T2FC6" target="_blank">Str. Șoimuș, Nr.46, Sector 4, Bucuresti</Link>
+              <Link href="https://maps.app.goo.gl/UQgr3aWotVKaWLs68" target="_blank">Str. Șoimuș, Nr. 45, Biroul 1, Cod Postal 040705, Sector 4, Bucuresti</Link>
             </div>
             <Separator orientation="vertical" className="mx-4" />
             <div className="font-sans flex justify-center items-center">
@@ -40,17 +40,17 @@ const Footer = () => {
           <div className="flex-col mt-2">
             <div className="font-sans flex justify-start items-center ml-2">
               <Phone className="w-5 h-5 mr-2" />
-              <a href="tel:+40712345678">(0712) 345 678</a>
+              <a href="tel:+40760780291">(0760) 780 291</a>
             </div>
             <Separator className="my-1" />
             <div className="font-sans flex justify-start items-center ml-2">
               <Mail className="w-5 h-5 mr-2" />
-              <a href="mailto:contact@crystal-hr.com">contact@crystal-hr.com</a>
+              <a href="mailto:office@crystalhradvisor.com">office@crystalhradvisor.com</a>
             </div>
             <Separator className="my-1" />
             <div className="font-sans flex justify-start items-center">
-              <MapPin className="4xs:w-8 4xs:h-8  md:h-5 w-5 mr-2 4xs:ml-2 md:ml-1 xl:ml-2" />
-              <Link href="https://maps.app.goo.gl/tC4FurfwAKZ6T2FC6" target="_blank">Str. Șoimuș, Nr.46, Sector 4, Bucuresti</Link>
+              <MapPin className="4xs:w-12 4xs:h-12  md:h-6 md:w-6 mr-2 4xs:ml-2 md:ml-1 xl:ml-2" />
+              <Link href="https://maps.app.goo.gl/UQgr3aWotVKaWLs68" target="_blank">Str. Șoimuș, Nr. 45, Biroul 1,Cod Postal 040705, Sector 4, Bucuresti</Link>
             </div>
             <Separator className="my-1" />
             <div className="font-sans flex justify-start items-center mb-2 ml-2">

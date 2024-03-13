@@ -22,7 +22,7 @@ const NavBar = () => {
           </Link>
           <div className="hidden xl:block text-lg">
             <h1 className="text-3xl">
-              Motto ul care te face sa mergi la munka
+              Building brilliant perspectives with crystal clarity
             </h1>
           </div>
           <div>
