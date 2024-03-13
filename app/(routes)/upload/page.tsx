@@ -4,21 +4,25 @@ import React from "react";
 import { motion } from "framer-motion";
 import FileUpload from "./components/FileUpload";
 
-
 const page = () => {
   return (
     <div className="font-sans w-full flex flex-col justify-center items-center">
       <h1 className="my-6 text-lg font-semibold">
-        Multumim pentru increderea acordata!
+        Începeți procesul de angajare!
       </h1>
-      <div className="w-[90%] grid grid-cols-1 xl:grid-cols-2">
+      <p className="text-md">
+        Pentru a vă putea ajuta, vă rugăm să ne furnizați câteva date despre
+        dumneavoastră.
+      </p>
+
+      <div className="w-[90%] mt-5 grid grid-cols-1 xl:grid-cols-2">
         <motion.div
           className="flex justify-center items-center"
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <FileUpload/>
+          <FileUpload />
         </motion.div>
         <motion.div
           className="flex justify-center items-center"

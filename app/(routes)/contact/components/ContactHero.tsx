@@ -11,7 +11,7 @@ const ContactHero = () => {
       }}
     >
       {" "}
-      <h1 className="flex justify-center items-center text-white 4xs:text-lg md:text-2xl xl:text-4xl font-semibold">
+      <h1 className="flex justify-center items-center text-white 4xs:text-2xl md:text-3xl xl:text-4xl font-semibold">
         Contacteaza-ne
       </h1>
     </div>

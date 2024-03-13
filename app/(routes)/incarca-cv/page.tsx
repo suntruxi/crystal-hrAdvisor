@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div className="font-sans w-full flex flex-col justify-center items-center">
       <h1 className="my-6 text-lg font-semibold">
-        Multumim pentru increderea acordata!
+        Mai ai un singur pas !
       </h1>
       <div className="w-[90%] grid grid-cols-1 xl:grid-cols-2">
         <motion.div

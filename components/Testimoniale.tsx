@@ -51,7 +51,7 @@ const Testimoniale = () => {
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { duration: 1, delay: index + 1 },
+              transition: { duration: 1, delay: 1+ (index*0.1) },
             }}
             viewport={{ once: true }}
           >

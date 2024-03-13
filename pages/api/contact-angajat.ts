@@ -4,10 +4,13 @@ import { transporter } from "@/config/nodemailer";
 const email = process.env.EMAIL;
 
 const CONTACT_MESSAGE_FIELDS: { [key: string]: string } = {
-  fullName: "Nume Prenume",
+  firstName: "Nume",
+  lastName: "Prenume",
   email: "Email",
-  cv: "CV",
+  phoneNumber: "Telefon",
   message: "Message",
+  pathName: "Denumire-CV",
+  url: "URL-CV",
 };
 
 const generateEmailContent = (data: any) => {
@@ -163,22 +166,26 @@ const generateEmailContent = (data: any) => {
 };
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method === "POST") {
+  if (req.method === "POST" || req.method === "DELETE") {
     const data = req.body;
-    console.log(data.cv);
+    const url = data.url;
+    console.log(data);
+    console.log(url);
 
     try {
-        await transporter.sendMail({
-              from: email,
-              to: email,
-              attachments: [{
-                filename: `CV-${data.fullName}`,
-                path: `${data.cv}`,
-              }],
-          ...generateEmailContent(data),
-          subject: "Cerere Angajat",
-        });
-        return res.status(200).json({ success: true });
+      await transporter.sendMail({
+        from: email,
+        to: email,
+        attachments: [
+          {
+            filename: `${data.pathName}`,
+            path: `${data.url}`,
+          },
+        ],
+        ...generateEmailContent(data),
+        subject: `Cerere Angajat - ${data.firstName} ${data.lastName}`,
+      });
+      return res.status(200).json({ success: true });
     } catch (error) {
       console.log(error);
       return res.status(400).json({ message: error });

@@ -18,41 +18,26 @@ import { sendCvForm } from "@/lib/api";
 import { CircleCheckBig, RotateCw } from "lucide-react";
 import { motion } from "framer-motion";
 import { Textarea } from "@/components/ui/textarea";
+import type { PutBlobResult } from "@vercel/blob";
 
-const allowedExtensions = [".doc", ".docx", ".pdf"];
-const maxSizeInBytes = 5 * 1024 * 1024;
+const phoneNumberRegex = /^\d{10}$/;
 
 const formSchema = z.object({
-  fullName: z.string().refine(
+  firstName: z.string(),
+  lastName: z.string(),
+  url: z.string(),
+  pathName: z.string(),
+  phoneNumber: z.string().refine(
     (value) => {
-      const capitalLetters = (value.match(/[A-Z]/g) || []).length;
-      const containsDigitsOrSymbols = /[0-9!@#$%^&*(),.?":{}|<>]/.test(value);
-
-      return capitalLetters === 2 && !containsDigitsOrSymbols;
+      return phoneNumberRegex.test(value);
     },
     {
-      message: "Format-ul numelui și al prenumelui: Nume Prenume",
+      message: "Numar de telefon invalid",
     }
   ),
   email: z.string().email({
     message: "Adresa de email invalidă.",
   }),
-  cv: z.string().refine(
-    (value) => {
-      const parts = value?.split(".");
-      const extension = parts?.pop()?.toLowerCase();
-      const fileSize = 5 * 1024 * 1024; // 5MB in bytes
-      return (
-        extension && // Check if extension is not undefined
-        allowedExtensions.includes("." + extension) &&
-        fileSize <= maxSizeInBytes
-      );
-    },
-    {
-      message:
-        "Formatul CV-ului trebuie să fie .doc, .docx sau .pdf și dimensiunea să nu depășească 5MB",
-    }
-  ),
   message: z
     .string()
     .min(10, {
@@ -76,13 +61,22 @@ const formSchema = z.object({
 const ContactFormCV = () => {
   const [buttonIsLoading, setButtonIsLoading] = useState(false);
   const [sendSuccess, setSendSuccess] = useState(false);
+  const firstName = localStorage.getItem("firstName");
+  const lastName = localStorage.getItem("lastName");
+  const url = localStorage.getItem("url");
+  const pathName = localStorage.getItem("pathname");
+
+  // console.log(firstName, lastName, url, pathName);
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      fullName: "",
+      firstName: firstName || "",
+      lastName: lastName || "",
+      url: url || "",
+      pathName: pathName || "",
+      phoneNumber: "",
       email: "",
-      cv: "",
       message: "",
     },
   });
@@ -91,14 +85,11 @@ const ContactFormCV = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+    // console.log(values);
     try {
-      await sendCvForm(values);
       setButtonIsLoading(true);
-      console.log(values);
-      setTimeout(() => {
-        setSendSuccess(true);
-      }, 3000);
+      await sendCvForm(values);
+      setSendSuccess(true);
     } catch (error) {}
   }
 
@@ -125,15 +116,15 @@ const ContactFormCV = () => {
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <FormField
               control={form.control}
-              name="fullName"
+              name="phoneNumber"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Nume si Prenume</FormLabel>
+                  <FormLabel>Numar de telefon</FormLabel>
                   <FormControl>
-                    <Input placeholder="Popescu Ion" {...field} />
+                    <Input placeholder="07XXXXXXXX" {...field} />
                   </FormControl>
                   <FormDescription>
-                    Numele si prenumele cu care va putem contacta
+                    Numarul dumneavoastră pe care va putem contacta
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -150,22 +141,6 @@ const ContactFormCV = () => {
                   </FormControl>
                   <FormDescription>
                     Email-ul dumneavoastră de contact{" "}
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="cv"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>CV</FormLabel>
-                  <FormControl>
-                    <Input type="file" {...field} />
-                  </FormControl>
-                  <FormDescription>
-                    Vă rugăm să încărcați CV-ul dumneavoastră
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
