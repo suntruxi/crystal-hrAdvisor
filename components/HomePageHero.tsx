@@ -29,7 +29,7 @@ const HomePageHero = () => {
       <motion.div
         className="w-full h-[75vh] flex items-center justify-center border-[#fe403f] border-t-[10px] border-b-[10px] xl:border-t-0 xl:border-r-[15px] xl:border-b-[30px]"
         style={{
-          backgroundImage: `url(/images/stanga-test.jpg)`,
+          backgroundImage: `url(/images/stanga.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -42,9 +42,9 @@ const HomePageHero = () => {
         viewport={{ once: true }}
       >
         {" "}
-        <div className="bg-black bg-opacity-50 p-4 flex flex-col justify-center items-center rounded-lg">
-          <h1 className="font-sans text-lg text-white font-semibold">
-            Caut candidati!
+        <div className="bg-white bg-opacity-40 p-4 flex flex-col justify-center items-center rounded-lg">
+          <h1 className="font-sans text-lg text-red-800 font-semibold">
+            Caut candidați!
           </h1>
           <Link href="/servicii">
             <Button
@@ -52,7 +52,7 @@ const HomePageHero = () => {
               className="font-sans hover:bg-red-800 hover:text-white mt-2"
             >
               <Handshake className="w-5 h-5 mr-2" />
-              Afla serviciile noastre
+              Află serviciile noastre
             </Button>
           </Link>
           <Link href="/solicita-oferta">
@@ -61,7 +61,7 @@ const HomePageHero = () => {
               className=" font-sans hover:bg-red-800 hover:text-white mt-3"
             >
               <MailQuestion className="w-5 h-5 mr-2" />
-              Solicita oferta
+              Solicită oferta
             </Button>
           </Link>
         </div>
@@ -75,7 +75,7 @@ const HomePageHero = () => {
           initial={{ opacity: 0 }}
           style={{ transition: "opacity  0.3s ease" }}
         >
-          <ChevronsLeft className="w-20 h-20 mr-2 text-white" />
+          <ChevronsLeft className="w-20 h-20 mr-2 text-[#fe403f]" />
         </motion.div>
       </motion.div>
       <motion.div
@@ -105,17 +105,17 @@ const HomePageHero = () => {
         >
           <ChevronsRight className="w-20 h-20 text-[#fe403f]" />
         </motion.div>
-        <div className="bg-black bg-opacity-50 p-4 flex flex-col justify-center items-center rounded-lg">
-          <h1 className="font-sans text-lg text-white font-semibold">
-            Vreau sa ma angajez!
+        <div className="bg-white bg-opacity-40 p-4 flex flex-col justify-center items-center rounded-lg">
+          <h1 className="font-sans text-lg text-red-800 font-semibold">
+            Vreau să mă angajez!
           </h1>
-          <Link href="/upload">
+          <Link href="/incarca-cv">
             <Button
               variant="outline"
               className="font-sans hover:bg-red-800 hover:text-white mt-2"
             >
               <FileUp className="w-5 h-5 mr-2" />
-              Incarca CV
+              Încarcă CV
             </Button>
           </Link>
         </div>
