@@ -12,8 +12,15 @@ import {
 import { StarIcon } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
 
+interface Testimonial {
+  name: string;
+  role: string;
+  description: string;
+  rating: number;
+}
+
 const Testimoniale = () => {
-  const t = testimonials;
+  const t: Testimonial[] = testimonials;
   return t.length > 0 ? (
     <div className="font-sans w-full flex flex-col justify-center items-center">
       <motion.div
