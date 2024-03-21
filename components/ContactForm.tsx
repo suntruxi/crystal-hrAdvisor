@@ -33,8 +33,12 @@ const formSchema = z.object({
   ),
   company: z
     .string()
-    .min(4, { message: "Numele companiei trebuie să aibă cel puțin 4 caractere." })
-    .max(50, { message: "Numele companiei nu poate avea mai mult de 50 caractere." }),
+    .min(4, {
+      message: "Numele companiei trebuie să aibă cel puțin 4 caractere.",
+    })
+    .max(50, {
+      message: "Numele companiei nu poate avea mai mult de 50 caractere.",
+    }),
   phone: z.string().refine((value) => /^\d{10}$/.test(value), {
     message: "Format-ul numărului de telefon: 07XXXXXXXX",
   }),
@@ -44,10 +48,10 @@ const formSchema = z.object({
   message: z
     .string()
     .min(10, {
-      message: "Mesajul trebuie sa conțină minim 10 caractere. "
+      message: "Mesajul trebuie sa conțină minim 10 caractere. ",
     })
     .max(1000, {
-      message: "Mesajul nu poate conține mai mult de 1000 de caractere. "
+      message: "Mesajul nu poate conține mai mult de 1000 de caractere. ",
     })
     .refine(
       (value) => {
@@ -100,9 +104,11 @@ const ContactForm = () => {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <CircleCheckBig className="text-green-700" />
-          <h1 className="font-semibold text-lg">Am primit cu succes email-ul dumneavoastră!</h1>
+          <h1 className="font-semibold text-lg">
+            Am primit cu succes email-ul dumneavoastră!
+          </h1>
           <h1>
-            Un reprezentant Crystal HR v-a reveni catre dumneavoastră in cel mai
+            Un reprezentant Crystal HR va reveni catre dumneavoastră in cel mai
             scurt timp.
           </h1>
         </motion.div>

@@ -62,12 +62,12 @@ const ContactFormCV = () => {
   const [sendSuccess, setSendSuccess] = useState(false);
   let firstName, lastName, url, pathName;
 
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     firstName = localStorage.getItem("firstName");
     lastName = localStorage.getItem("lastName");
     url = localStorage.getItem("url");
     pathName = localStorage.getItem("pathname");
-   }
+  }
 
   // console.log(firstName, lastName, url, pathName);
   // 1. Define your form.
@@ -110,7 +110,7 @@ const ContactFormCV = () => {
             Am primit cu succes email-ul dumneavoastră!
           </h1>
           <h1>
-            Un reprezentant Crystal HR v-a reveni catre dumneavoastră in cel mai
+            Un reprezentant Crystal HR va reveni catre dumneavoastră in cel mai
             scurt timp.
           </h1>
         </motion.div>
@@ -124,7 +124,7 @@ const ContactFormCV = () => {
                 <FormItem>
                   <FormLabel>Numar de telefon</FormLabel>
                   <FormControl>
-                    <Input placeholder="07XXXXXXXX" {...field}/>
+                    <Input placeholder="07XXXXXXXX" {...field} />
                   </FormControl>
                   <FormDescription>
                     Numarul dumneavoastră pe care va putem contacta
