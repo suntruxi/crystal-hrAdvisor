@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 
 const Testimoniale = () => {
   const t = testimonials;
-  return (
+  return t.length > 0 ? (
     <div className="font-sans w-full flex flex-col justify-center items-center">
       <motion.div
         className="p-10 text-md italic w-[90%]"
@@ -51,7 +51,7 @@ const Testimoniale = () => {
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { duration: 1, delay: 1+ (index*0.1) },
+              transition: { duration: 1, delay: index + 1 },
             }}
             viewport={{ once: true }}
           >
@@ -73,6 +73,8 @@ const Testimoniale = () => {
         ))}
       </div>
     </div>
+  ) : (
+    <div className="font-sans w-full flex flex-col justify-center items-center"></div>
   );
 };
 
