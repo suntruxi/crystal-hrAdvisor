@@ -5,9 +5,9 @@ const DespreNoiHero = () => {
     <div
       className="w-full font-sans h-[50vh] flex items-center justify-center"
       style={{
-        backgroundImage: `url(/images/despre-noi.jpg)`,
+        backgroundImage: `url(/images/desprenoi2.jpg)`,
         backgroundSize: "cover",
-        backgroundPosition: "right",
+        backgroundPosition: "top",
       }}
     >
       {" "}
