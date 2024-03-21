@@ -31,7 +31,7 @@ const formSchema = z.object({
       return phoneNumberRegex.test(value);
     },
     {
-      message: "Numar de telefon invalid",
+      message: "Număr de telefon invalid",
     }
   ),
   email: z.string().email({
@@ -40,7 +40,7 @@ const formSchema = z.object({
   message: z
     .string()
     .min(10, {
-      message: "Mesajul trebuie sa conțină minim 10 caractere. ",
+      message: "Mesajul trebuie să conțină minim 10 caractere. ",
     })
     .max(1000, {
       message: "Mesajul nu poate conține mai mult de 1000 de caractere. ",
@@ -110,7 +110,7 @@ const ContactFormCV = () => {
             Am primit cu succes email-ul dumneavoastră!
           </h1>
           <h1>
-            Un reprezentant Crystal HR va reveni catre dumneavoastră in cel mai
+            Un reprezentant Crystal HR va reveni către dumneavoastră în cel mai
             scurt timp.
           </h1>
         </motion.div>
@@ -122,12 +122,12 @@ const ContactFormCV = () => {
               name="phoneNumber"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Numar de telefon</FormLabel>
+                  <FormLabel>Număr de telefon</FormLabel>
                   <FormControl>
                     <Input placeholder="07XXXXXXXX" {...field} />
                   </FormControl>
                   <FormDescription>
-                    Numarul dumneavoastră pe care va putem contacta
+                    Numărul dumneavoastră pe care vă putem contacta
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -157,12 +157,12 @@ const ContactFormCV = () => {
                   <FormLabel>Mesaj</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Doresc sa ma angajez ca..."
+                      placeholder="Doresc să mă angajez ca..."
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
-                    Mesajul dumneavoastră pentru echipa noastra{" "}
+                    Mesajul dumneavoastră pentru echipa noastră{" "}
                   </FormDescription>
                   <FormMessage />
                 </FormItem>

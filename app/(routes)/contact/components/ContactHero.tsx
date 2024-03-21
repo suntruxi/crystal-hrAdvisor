@@ -12,7 +12,7 @@ const ContactHero = () => {
     >
       {" "}
       <h1 className="flex justify-center items-center text-white 4xs:text-2xl md:text-3xl xl:text-4xl font-semibold">
-        Contacteaza-ne
+        Contactează-ne
       </h1>
     </div>
   );

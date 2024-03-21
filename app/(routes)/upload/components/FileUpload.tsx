@@ -91,13 +91,13 @@ export default function FileUpload() {
               htmlFor="terms1"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-              Accept termenii si conditiile
+              Accept termenii și condițiile
             </label>
             <p className="text-sm text-muted-foreground">
-              Sunteti de acord cu{" "}
+              Sunteți de acord cu{" "}
               <Link href="/termeni-conditii" target="_blank">
                 <span className="text-blue-600 underline">
-                  termenii si conditiile.
+                  termenii și condițiile.
                 </span>
               </Link>
             </p>

@@ -23,7 +23,7 @@ const ServiciiAcordeon = () => {
           contractelor de muncă.
         </h1>
         <h2 className="mt-4 text-md">
-          Descoperiți cum Crystal HR Advisorpoate transforma modul în care vă
+          Descoperiți cum Crystal HR Advisor poate transforma modul în care vă
           gestionați resursele umane, oferind servicii personalizate de
           recrutare, redactare de documente și gestionare a personalului, pentru
           a vă ajuta să atingeți și să depășiți obiectivele organizației

@@ -19,7 +19,7 @@ const DespreNoi2 = () => {
           optimiza operațiunile.
         </h1>
         <h2 className="text-lg font-semibold italic mt-4">
-          De ce sa lucrezi cu noi?
+          De ce să lucrezi cu noi?
         </h2>
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -34,7 +34,7 @@ const DespreNoi2 = () => {
           transition={{ duration: 0.5, delay: 2 }}
         >
           <p className="text-md mt-2">
-            • Procese eficiente si mai putin costisitoare
+            • Procese eficiente și mai puțin costisitoare
           </p>
         </motion.div>
         <motion.div
@@ -60,7 +60,7 @@ const DespreNoi2 = () => {
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 5}}
+          transition={{ duration: 0.5, delay: 5 }}
         >
           <p className="text-md mt-2">
             • Oferim o garanție de 30 de zile pentru fiecare angajare, însemnând

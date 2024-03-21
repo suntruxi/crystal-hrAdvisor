@@ -125,7 +125,7 @@ const ContactForm = () => {
                     <Input placeholder="Popescu Ion" {...field} />
                   </FormControl>
                   <FormDescription>
-                    Numele si prenumele cu care va putem contacta
+                    Numele si prenumele cu care vă putem contacta
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -157,7 +157,7 @@ const ContactForm = () => {
                     <Input placeholder="07XXXXXXXX" {...field} />
                   </FormControl>
                   <FormDescription>
-                    Numarul de telefon pe care va putem contacta{" "}
+                    Numărul de telefon pe care vă putem contacta{" "}
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -187,12 +187,12 @@ const ContactForm = () => {
                   <FormLabel>Mesaj</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="M-ar interesa sa gasesc..."
+                      placeholder="M-ar interesa să găsesc..."
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
-                    Mesajul dumneavoastră pentru echipa noastra{" "}
+                    Mesajul dumneavoastră pentru echipa noastră{" "}
                   </FormDescription>
                   <FormMessage />
                 </FormItem>

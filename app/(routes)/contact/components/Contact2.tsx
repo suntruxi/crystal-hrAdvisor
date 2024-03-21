@@ -29,7 +29,7 @@ const Contact2 = () => {
             <h3 className="font-semibold text-md mt-4">Datele de Contact:</h3>
             <p>
               Adresa: Str. Șoimuș, Nr. 45, Biroul 1, Cod Postal 040705, Sector
-              4, Bucuresti
+              4, București
             </p>
             <p>Telefon: (0760) 780 291</p>
             <p>E-mail: office@crystalhradvisor.com</p>
@@ -37,7 +37,7 @@ const Contact2 = () => {
           <div className="flex flex-col justify-center items-center">
             <h3 className="font-semibold text-md mt-4">Program de Lucru:</h3>
             <p>Luni - Vineri: 9:00-17:00</p>
-            <p>Sâmbătă - Duminică: Inchis</p>
+            <p>Sâmbătă - Duminică: Închis</p>
           </div>
           <div className="flex flex-col justify-center items-center">
             <h3 className="font-semibold text-md mt-4">Datele firmei:</h3>
