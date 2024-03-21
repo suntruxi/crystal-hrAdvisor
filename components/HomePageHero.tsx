@@ -29,7 +29,7 @@ const HomePageHero = () => {
       <motion.div
         className="w-full h-[75vh] flex items-center justify-center border-[#fe403f] border-t-[10px] border-b-[10px] xl:border-t-0 xl:border-r-[15px] xl:border-b-[30px]"
         style={{
-          backgroundImage: `url(/images/stanga.jpg)`,
+          backgroundImage: `url(/images/stanga-test.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -42,8 +42,8 @@ const HomePageHero = () => {
         viewport={{ once: true }}
       >
         {" "}
-        <div className="bg-white bg-opacity-40 p-4 flex flex-col justify-center items-center rounded-lg">
-          <h1 className="font-sans text-lg text-red-800 font-semibold">
+        <div className="bg-black bg-opacity-50 p-4 flex flex-col justify-center items-center rounded-lg">
+          <h1 className="font-sans text-lg text-white font-semibold">
             Caut candidați!
           </h1>
           <Link href="/servicii">
@@ -75,7 +75,7 @@ const HomePageHero = () => {
           initial={{ opacity: 0 }}
           style={{ transition: "opacity  0.3s ease" }}
         >
-          <ChevronsLeft className="w-20 h-20 mr-2 text-[#fe403f]" />
+          <ChevronsLeft className="w-20 h-20 mr-2 text-white" />
         </motion.div>
       </motion.div>
       <motion.div
@@ -105,11 +105,11 @@ const HomePageHero = () => {
         >
           <ChevronsRight className="w-20 h-20 text-[#fe403f]" />
         </motion.div>
-        <div className="bg-white bg-opacity-40 p-4 flex flex-col justify-center items-center rounded-lg">
-          <h1 className="font-sans text-lg text-red-800 font-semibold">
+        <div className="bg-black bg-opacity-50 p-4 flex flex-col justify-center items-center rounded-lg">
+          <h1 className="font-sans text-lg text-white font-semibold">
             Vreau să mă angajez!
           </h1>
-          <Link href="/incarca-cv">
+          <Link href="/upload">
             <Button
               variant="outline"
               className="font-sans hover:bg-red-800 hover:text-white mt-2"
