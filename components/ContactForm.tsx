@@ -90,7 +90,7 @@ const ContactForm = () => {
       // console.log(values);
       setTimeout(() => {
         setSendSuccess(true);
-      }, 3000);
+      }, 1000);
     } catch (error) {}
   }
 
